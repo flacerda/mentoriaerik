@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>VUEJS - MENTORIA</title>	
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<br>
+  <div id="app-7" class="col-md-6 col-md-offset-3">
+   <div class="form-group">
+    <input type="text" class="form-control" placeholder="Informe sua tarefa" name="task" id="task"  v-model="task_input" v-on:keyup.enter="addTask()">
+  </div>
+  
+  <ol class="list-group">
+    <todo-item class="list-group-item" v-for="item in taskList" v-bind:todo="item"></todo-item>
+  </ol>
+</div>
+ 	
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="script.js"></script>
+</body>
+</html> 
